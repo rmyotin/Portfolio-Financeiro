@@ -208,6 +208,70 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "Portifolio.Controllers.Controllers.AnalyticsController",
+    "Method": "GetDiversification",
+    "RelativePath": "api/portfolios/{id}/Analytics/diversification",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Portifolio.Controllers.Controllers.AnalyticsController",
+    "Method": "GetPerformance",
+    "RelativePath": "api/portfolios/{id}/Analytics/performance",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Portifolio.Controllers.Controllers.AnalyticsController",
+    "Method": "GetRebalancing",
+    "RelativePath": "api/portfolios/{id}/Analytics/rebalancing",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Portifolio.Controllers.Controllers.AnalyticsController",
+    "Method": "GetRiskAnalysis",
+    "RelativePath": "api/portfolios/{id}/Analytics/risk-analysis",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "Portifolio.Controllers.Controllers.PortfoliosController",
     "Method": "AddPosition",
     "RelativePath": "api/Portfolios/{id}/positions",
