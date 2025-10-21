@@ -12,7 +12,6 @@ namespace Portifolio.Repositories.Repositories
         {
             _context = context;
         }
-
         public IEnumerable<Asset> GetAll() => _context.Assets.ToList();
 
         public Asset? GetById(int id) => _context.Assets.Find(id);

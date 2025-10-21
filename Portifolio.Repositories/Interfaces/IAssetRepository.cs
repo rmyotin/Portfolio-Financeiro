@@ -18,5 +18,6 @@ namespace Portifolio.Repositories.Interfaces
         bool Exists(int id);
         bool ExistsBySymbol(string symbol);
 
+
     }
 }

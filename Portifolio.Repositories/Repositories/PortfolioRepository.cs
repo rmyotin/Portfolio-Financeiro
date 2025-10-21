@@ -13,7 +13,6 @@ namespace Portifolio.Repositories.Repositories
     public class PortfolioRepository : IPortfolioRepository
     {
         private readonly AppDbContext _context;
-
         public PortfolioRepository(AppDbContext context)
         {
             _context = context;

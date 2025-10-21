@@ -18,5 +18,6 @@ namespace Portifolio.Repositories.Interfaces
         void UpdatePosition(Position position);
         Position? GetPosition(int positionId);
         void RemovePosition(Position position);
+
     }
 }

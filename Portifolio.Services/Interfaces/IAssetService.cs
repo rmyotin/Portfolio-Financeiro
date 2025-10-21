@@ -16,5 +16,6 @@ namespace Portifolio.Services.Interfaces
         (bool success, string message) Update(int id, Asset updatedAsset);
         (bool success, string message) UpdatePrice(int id, double newPrice);
         (bool success, string message) Delete(string symbol);
+
     }
 }
