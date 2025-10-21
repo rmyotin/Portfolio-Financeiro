@@ -1,0 +1,12 @@
+D:\PROJETOS\BNY\Portfolio-Financeiro\Portifolio.Models\bin\Debug\net8.0\Portifolio.Models.deps.json
+D:\PROJETOS\BNY\Portfolio-Financeiro\Portifolio.Models\bin\Debug\net8.0\Portifolio.Models.dll
+D:\PROJETOS\BNY\Portfolio-Financeiro\Portifolio.Models\bin\Debug\net8.0\Portifolio.Models.pdb
+D:\PROJETOS\BNY\Portfolio-Financeiro\Portifolio.Models\obj\Debug\net8.0\Portifolio.Models.GeneratedMSBuildEditorConfig.editorconfig
+D:\PROJETOS\BNY\Portfolio-Financeiro\Portifolio.Models\obj\Debug\net8.0\Portifolio.Models.AssemblyInfoInputs.cache
+D:\PROJETOS\BNY\Portfolio-Financeiro\Portifolio.Models\obj\Debug\net8.0\Portifolio.Models.AssemblyInfo.cs
+D:\PROJETOS\BNY\Portfolio-Financeiro\Portifolio.Models\obj\Debug\net8.0\Portifolio.Models.csproj.CoreCompileInputs.cache
+D:\PROJETOS\BNY\Portfolio-Financeiro\Portifolio.Models\obj\Debug\net8.0\Portifolio.Models.sourcelink.json
+D:\PROJETOS\BNY\Portfolio-Financeiro\Portifolio.Models\obj\Debug\net8.0\Portifolio.Models.dll
+D:\PROJETOS\BNY\Portfolio-Financeiro\Portifolio.Models\obj\Debug\net8.0\refint\Portifolio.Models.dll
+D:\PROJETOS\BNY\Portfolio-Financeiro\Portifolio.Models\obj\Debug\net8.0\Portifolio.Models.pdb
+D:\PROJETOS\BNY\Portfolio-Financeiro\Portifolio.Models\obj\Debug\net8.0\ref\Portifolio.Models.dll

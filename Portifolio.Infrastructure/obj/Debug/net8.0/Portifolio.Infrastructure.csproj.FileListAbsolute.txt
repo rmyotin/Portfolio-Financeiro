@@ -1,0 +1,16 @@
+D:\PROJETOS\BNY\Portfolio-Financeiro\Portifolio.Infrastructure\bin\Debug\net8.0\Portifolio.Infrastructure.deps.json
+D:\PROJETOS\BNY\Portfolio-Financeiro\Portifolio.Infrastructure\bin\Debug\net8.0\Portifolio.Infrastructure.dll
+D:\PROJETOS\BNY\Portfolio-Financeiro\Portifolio.Infrastructure\bin\Debug\net8.0\Portifolio.Infrastructure.pdb
+D:\PROJETOS\BNY\Portfolio-Financeiro\Portifolio.Infrastructure\obj\Debug\net8.0\Portifolio.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+D:\PROJETOS\BNY\Portfolio-Financeiro\Portifolio.Infrastructure\obj\Debug\net8.0\Portifolio.Infrastructure.AssemblyInfoInputs.cache
+D:\PROJETOS\BNY\Portfolio-Financeiro\Portifolio.Infrastructure\obj\Debug\net8.0\Portifolio.Infrastructure.AssemblyInfo.cs
+D:\PROJETOS\BNY\Portfolio-Financeiro\Portifolio.Infrastructure\obj\Debug\net8.0\Portifolio.Infrastructure.csproj.CoreCompileInputs.cache
+D:\PROJETOS\BNY\Portfolio-Financeiro\Portifolio.Infrastructure\obj\Debug\net8.0\Portifolio.Infrastructure.sourcelink.json
+D:\PROJETOS\BNY\Portfolio-Financeiro\Portifolio.Infrastructure\obj\Debug\net8.0\Portifolio.Infrastructure.dll
+D:\PROJETOS\BNY\Portfolio-Financeiro\Portifolio.Infrastructure\obj\Debug\net8.0\refint\Portifolio.Infrastructure.dll
+D:\PROJETOS\BNY\Portfolio-Financeiro\Portifolio.Infrastructure\obj\Debug\net8.0\Portifolio.Infrastructure.pdb
+D:\PROJETOS\BNY\Portfolio-Financeiro\Portifolio.Infrastructure\obj\Debug\net8.0\ref\Portifolio.Infrastructure.dll
+D:\PROJETOS\BNY\Portfolio-Financeiro\Portifolio.Infrastructure\bin\Debug\net8.0\Portifolio.Models.dll
+D:\PROJETOS\BNY\Portfolio-Financeiro\Portifolio.Infrastructure\bin\Debug\net8.0\Portifolio.Models.pdb
+D:\PROJETOS\BNY\Portfolio-Financeiro\Portifolio.Infrastructure\obj\Debug\net8.0\Portifolio.Infrastructure.csproj.AssemblyReference.cache
+D:\PROJETOS\BNY\Portfolio-Financeiro\Portifolio.Infrastructure\obj\Debug\net8.0\Portifol.B39FB34D.Up2Date
