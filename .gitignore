@@ -1,93 +1,153 @@
-# =========================
-# .NET & Visual Studio Ignore
-# =========================
-
-## Build results
+# ============================================
+# 🧱 BUILD E COMPILAÇÃO (.NET / Visual Studio)
+# ============================================
+# Ignora pastas de build temporário de todos os projetos
 [Bb]in/
 [Oo]bj/
 [Ll]og/
+artifacts/
+release/
+debug/
+
+# Ignora logs de build e execução
 *.log
 *.tlog
-*.vspscc
-*.vssscc
+*.build*
+*.ncrunchproject*
 
-## Visual Studio files
+# ============================================
+# 🧩 AMBIENTE DE DESENVOLVIMENTO (IDE)
+# ============================================
+# Visual Studio e VS Code
 .vs/
 .vscode/
 *.user
 *.suo
 *.userosscache
 *.sln.docstates
+*.userprefs
 
-## Test results
+# JetBrains Rider
+.idea/
+*.iml
+
+# ============================================
+# 🧪 TESTES UNITÁRIOS
+# ============================================
+# Saídas dos testes (xUnit / MSTest / NUnit)
 [Tt]est[Rr]esult*/
 [Bb]uild[Ll]og.*
 *.coverage
 *.coveragexml
-*.ncrunchsolution*
-*.ncrunchproject*
+Portifolio.Tests/TestResults/
+Portifolio.Tests/bin/
+Portifolio.Tests/obj/
 
-## Backup & cache
-_ReSharper*/
-*.resharper
-*.cache/
-*.pidb
-*.userprefs
-*.dotCover
-*.DotSettings.user
-*.idea/
-*.sdf
-*.dbmdl
-*.bak
-*.orig
-
-## Distribution
-*.Publish.xml
-*.PublishSettings
-*.pubxml
-*.publishproj
-app.publish/
-*.deploy*
-
-## Packages
+# ============================================
+# 📦 PACOTES E DEPENDÊNCIAS
+# ============================================
+# NuGet packages
 *.nupkg
 *.snupkg
 **/packages/*
 !**/packages/build/
 !**/packages/repositories.config
 
-## Secrets & keys
+# Node.js (para frontend ou Swagger UI customizado)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# ============================================
+# 💾 BANCO DE DADOS / SEED
+# ============================================
+# Arquivos locais SQLite e bancos temporários
+*.db
+*.sqlite
+*.sqlite3
+*.mdf
+*.ldf
+
+# ============================================
+# 🔑 ARQUIVOS DE CONFIGURAÇÃO SENSÍVEIS
+# ============================================
+# AppSettings locais com credenciais
 appsettings.Development.json
 appsettings.Local.json
 appsettings.Test.json
-*.pfx
-*.key
-*.cer
-*.snk
 
-## Environment files
+# Variáveis de ambiente
 .env
 .env.local
 .env.development
 .env.test
 .env.production
 
-## Tooling
-node_modules/
-dist/
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
+# ============================================
+# 🔒 CHAVES E CERTIFICADOS
+# ============================================
+*.pfx
+*.pem
+*.cer
+*.key
+*.snk
+*.crt
+
+# ============================================
+# 🧰 FERRAMENTAS E CACHE
+# ============================================
+# Resharper, Sonar e outros analisadores
+_ReSharper*/
+*.resharper
+*.DotSettings.user
+*.cache/
+*.pidb
+*.dbmdl
+*.bak
+*.orig
+
+# Cobertura e relatórios
 coverage/
-.DS_Store
+lcov.info
 
-## Build artifacts
-artifacts/
+# ============================================
+# 📄 DOCUMENTAÇÃO E ARQUIVOS GERADOS
+# ============================================
+# XML de documentação gerado pelo build
+*.xml
+
+# PDFs e relatórios exportados
+*.pdf
+*.docx
+*.xlsx
+*.pptx
+
+# ============================================
+# 🗃️ PUBLICAÇÃO E DISTRIBUIÇÃO
+# ============================================
+# Arquivos de publicação e Web Deploy
+*.Publish.xml
+*.pubxml
+*.publishproj
+app.publish/
+*.deploy*
 publish/
-release/
-debug/
 
-## Others
+# ============================================
+# 🧠 PERSONALIZAÇÃO DO PROJETO PORTIFOLIO
+# ============================================
+# Banco e migrations locais da Infrastructure
+Portifolio.Infrastructure/Migrations/
+Portifolio.Infrastructure/*.sqlite
+
+# Logs e arquivos temporários da API
+Portifolio.Controllers/logs/
+Portifolio.Controllers/temp/
+
+# ============================================
+# ⚙️ OUTROS ARQUIVOS TEMPORÁRIOS
+# ============================================
 Thumbs.db
 desktop.ini
 *.tmp
@@ -96,28 +156,4 @@ desktop.ini
 *.zip
 *.tar.gz
 *.7z
-
-# =========================
-# Custom for this project
-# =========================
-# Ignore local database and EF Core migrations cache
-*.db
-*.sqlite
-*.sqlite3
-Migrations/
-
-# Ignore test binaries
-Portifolio.Tests/TestResults/
-Portifolio.Tests/bin/
-Portifolio.Tests/obj/
-
-# Ignore Rider and VS Code settings
-.idea/
-.vscode/
-
-# Ignore generated documentation
-*.xml
-
-# Ignore local SSL dev certs
-*.pem
-*.crt
+*.rar
