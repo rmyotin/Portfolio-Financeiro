@@ -13,6 +13,10 @@ namespace Portifolio.Tests
         public static SeedData Load()
         {
             var path = Path.Combine(AppContext.BaseDirectory, "SeedData.json");
+
+            if (!File.Exists(path))
+                throw new FileNotFoundException($"SeedData.json não encontrado em: {path}");
+
             var json = File.ReadAllText(path);
             return JsonConvert.DeserializeObject<SeedData>(json)!;
         }

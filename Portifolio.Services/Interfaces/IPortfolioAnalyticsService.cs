@@ -1,12 +1,13 @@
-﻿using Portifolio.Models.Models;
+﻿using Portifolio.Models.Dtos;
+using Portifolio.Models.Models;
 
 namespace Portifolio.Services.Interfaces
 {
     public interface IPortfolioAnalyticsService
     {
-        object GetPerformance(Portfolio portfolio);
-        object GetRiskAnalysis(Portfolio portfolio);
-        object GetRebalancing(Portfolio portfolio);
+        PerformanceResult GetPerformance(Portfolio portfolio);
+        RiskAnalysisResult GetRiskAnalysis(Portfolio portfolio);
+        RebalancingResult GetRebalancing(Portfolio portfolio);
         object GetDiversification(Portfolio portfolio);
     }
 }

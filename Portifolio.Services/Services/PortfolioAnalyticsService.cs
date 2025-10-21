@@ -1,11 +1,7 @@
-﻿using Portifolio.Models.Models;
+﻿using Portifolio.Models.Dtos;
+using Portifolio.Models.Models;
 using Portifolio.Repositories.Interfaces;
 using Portifolio.Services.Interfaces;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Portifolio.Services.Services
 {
@@ -25,7 +21,7 @@ namespace Portifolio.Services.Services
             _assetRepository = assetRepository;
         }
 
-        public object GetPerformance(Portfolio portfolio)
+        public PerformanceResult GetPerformance(Portfolio portfolio)
         {
             double totalValue = _portfolioService.CalculateTotalValue(portfolio);
             double totalReturn = _portfolioService.CalculateReturnPercent(portfolio);
@@ -35,17 +31,17 @@ namespace Portifolio.Services.Services
                 ? Math.Pow(1 + (totalReturn / 100), 365 / days) - 1
                 : 0;
 
-            return new
-            {
-                Portfolio = portfolio.Name,
-                TotalInvestment = portfolio.TotalInvestment,
-                CurrentValue = Math.Round(totalValue, 2),
-                TotalReturnPercent = Math.Round(totalReturn, 2),
-                AnnualizedReturnPercent = Math.Round(annualizedReturn * 100, 2)
-            };
+            return new PerformanceResult
+            (
+                portfolio.Name,
+            portfolio.TotalInvestment,
+            Math.Round(totalValue, 2),
+            Math.Round(totalReturn, 2),
+            Math.Round(annualizedReturn * 100, 2)
+            );
         }
 
-        public object GetRiskAnalysis(Portfolio portfolio)
+        public RiskAnalysisResult GetRiskAnalysis(Portfolio portfolio)
         {
             // Volatilidade: desvio padrão dos valores das posições
             var values = new List<double>();
@@ -80,19 +76,18 @@ namespace Portifolio.Services.Services
                 largestPositionPercent = Math.Round(largest / totalValue * 100, 2);
             }
 
-            return new
-            {
-                Portfolio = portfolio.Name,
-                VolatilityPercent = Math.Round(volatility * 100, 2),
-                SharpeRatio = Math.Round(sharpe, 3),
-                LargestAssetConcentrationPercent = largestPositionPercent
-            };
+            return new RiskAnalysisResult(
+                portfolio.Name,
+                Math.Round(volatility * 100, 2),
+                Math.Round(sharpe, 3),
+                largestPositionPercent
+            );
         }
 
-        public object GetRebalancing(Portfolio portfolio)
+        public RebalancingResult GetRebalancing(Portfolio portfolio)
         {
             double totalValue = _portfolioService.CalculateTotalValue(portfolio);
-            var suggestions = new List<object>();
+            var suggestions = new List<RebalancingAction>();
 
             foreach (var pos in portfolio.Positions)
             {
@@ -106,26 +101,26 @@ namespace Portifolio.Services.Services
                 if (Math.Abs(difference) < 0.01) continue; // ignora variações pequenas
 
                 double rebalanceValue = Math.Abs(difference * totalValue);
-                double cost = rebalanceValue * TransactionCost;
+                double cost = rebalanceValue * 0.003;
 
                 if (rebalanceValue < 100) continue; // ignora transações pequenas
 
-                suggestions.Add(new
-                {
-                    Asset = pos.AssetSymbol,
-                    Action = difference > 0 ? "SELL" : "BUY",
-                    Value = Math.Round(rebalanceValue - cost, 2),
-                    TransactionCost = Math.Round(cost, 2)
-                });
+                suggestions.Add(new RebalancingAction(
+                    pos.AssetSymbol,
+                    difference > 0 ? "SELL" : "BUY",
+                    Math.Round(rebalanceValue - cost, 2),
+                    Math.Round(cost, 2)
+                ));
             }
 
-            return new
-            {
-                Portfolio = portfolio.Name,
-                TotalValue = Math.Round(totalValue, 2),
-                IsBalanced = !suggestions.Any(),
-                SuggestedActions = suggestions
-            };
+            bool isBalanced = !suggestions.Any();
+
+            return new RebalancingResult(
+                portfolio.Name,
+                Math.Round(totalValue, 2),
+                isBalanced,
+                suggestions
+             );
         }
 
         public object GetDiversification(Portfolio portfolio)

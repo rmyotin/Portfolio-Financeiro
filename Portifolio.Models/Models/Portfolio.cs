@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.Text.Json.Serialization;
 
 namespace Portifolio.Models.Models
 {
@@ -18,6 +19,9 @@ namespace Portifolio.Models.Models
         [Range(0.01, double.MaxValue)]
         public double TotalInvestment { get; set; }
 
+        [JsonPropertyName("createdAt")]
+        [DataType(DataType.Date)]
+        [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
         public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
 
         public ICollection<Position> Positions { get; set; } = new List<Position>();
