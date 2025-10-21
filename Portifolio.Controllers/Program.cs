@@ -17,6 +17,9 @@ builder.Services.AddDbContext<AppDbContext>(opt => opt.UseInMemoryDatabase("Port
 builder.Services.AddScoped<AssetRepository>();
 builder.Services.AddScoped<AssetService>();
 
+builder.Services.AddScoped<PortfolioRepository>();
+builder.Services.AddScoped<PortfolioService>();
+
 
 var app = builder.Build();
 

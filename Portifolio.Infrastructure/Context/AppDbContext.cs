@@ -8,11 +8,18 @@ namespace Portifolio.Infrastructure.Context
         public DbSet<Asset> Assets => Set<Asset>();
         public DbSet<Portfolio> Portfolios => Set<Portfolio>();
 
+        public DbSet<Position> Positions => Set<Position>();
+
         public AppDbContext(DbContextOptions<AppDbContext> options) : base(options) { }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<Portfolio>().OwnsMany(p => p.Positions);
+            modelBuilder.Entity<Portfolio>()
+                        .HasMany(p => p.Positions)
+                        .WithOne()
+                        .HasForeignKey(pos => pos.PortfolioId)
+                        .OnDelete(DeleteBehavior.Cascade);
+
             base.OnModelCreating(modelBuilder);
         }
     }
