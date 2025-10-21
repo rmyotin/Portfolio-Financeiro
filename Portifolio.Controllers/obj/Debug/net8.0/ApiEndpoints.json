@@ -63,43 +63,6 @@
   },
   {
     "ContainingType": "Portifolio.Controllers.Controllers.AssetsController",
-    "Method": "Update",
-    "RelativePath": "api/Assets/{id}",
-    "HttpMethod": "PUT",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "id",
-        "Type": "System.Int32",
-        "IsRequired": true
-      },
-      {
-        "Name": "updatedAsset",
-        "Type": "Portifolio.Models.Models.Asset",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "Portifolio.Controllers.Controllers.AssetsController",
-    "Method": "Delete",
-    "RelativePath": "api/Assets/{id}",
-    "HttpMethod": "DELETE",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "id",
-        "Type": "System.Int32",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "Portifolio.Controllers.Controllers.AssetsController",
     "Method": "UpdatePrice",
     "RelativePath": "api/Assets/{id}/price",
     "HttpMethod": "PUT",
@@ -118,32 +81,6 @@
       }
     ],
     "ReturnTypes": []
-  },
-  {
-    "ContainingType": "Portifolio.Controllers.Controllers.AssetsController",
-    "Method": "GetBySymbol",
-    "RelativePath": "api/Assets/{symbol}",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "symbol",
-        "Type": "System.String",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": [
-      {
-        "Type": "Portifolio.Models.Models.Asset",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
   },
   {
     "ContainingType": "Portifolio.Controllers.Controllers.AssetsController",
