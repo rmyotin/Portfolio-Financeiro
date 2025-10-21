@@ -22,6 +22,8 @@ builder.Services.AddScoped<IAssetService, AssetService>();
 builder.Services.AddScoped<IPortfolioRepository, PortfolioRepository>();
 builder.Services.AddScoped<IPortfolioService, PortfolioService>();
 
+builder.Services.AddScoped<IPortfolioAnalyticsService, PortfolioAnalyticsService>();
+
 
 var app = builder.Build();
 
