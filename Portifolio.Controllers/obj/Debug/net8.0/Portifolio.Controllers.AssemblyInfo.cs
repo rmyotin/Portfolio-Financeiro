@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Portifolio.Controllers")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+dc69338ab7ee8b304a01bfa778e505af25f62412")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a9df4d67e578c8b29e7449b5dc51b717ba1abe07")]
 [assembly: System.Reflection.AssemblyProductAttribute("Portifolio.Controllers")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Portifolio.Controllers")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

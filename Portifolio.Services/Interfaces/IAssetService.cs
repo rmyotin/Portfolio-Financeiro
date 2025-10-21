@@ -9,6 +9,7 @@ namespace Portifolio.Services.Interfaces
 {
     public interface IAssetService
     {
+
         IEnumerable<Asset> GetAll();
         Asset? GetById(int id);
         Asset? GetBySymbol(string symbol);
