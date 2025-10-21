@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Portifolio.Services", "Port
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Portifolio.Controllers", "Portifolio.Controllers\Portifolio.Controllers.csproj", "{0F4CFB4D-8A5E-4928-B983-9A098F4CE58A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Portifolio.Tests", "Portifolio.Tests\Portifolio.Tests.csproj", "{EE2CDBE0-7249-4EE0-B533-5DB2B79C038F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{0F4CFB4D-8A5E-4928-B983-9A098F4CE58A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0F4CFB4D-8A5E-4928-B983-9A098F4CE58A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0F4CFB4D-8A5E-4928-B983-9A098F4CE58A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EE2CDBE0-7249-4EE0-B533-5DB2B79C038F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EE2CDBE0-7249-4EE0-B533-5DB2B79C038F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EE2CDBE0-7249-4EE0-B533-5DB2B79C038F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EE2CDBE0-7249-4EE0-B533-5DB2B79C038F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
