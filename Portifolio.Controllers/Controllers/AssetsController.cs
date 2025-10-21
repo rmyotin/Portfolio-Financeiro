@@ -23,7 +23,13 @@ namespace Portifolio.Controllers.Controllers
             return Ok(assets);
         }
 
-        // GET: api/assets/PETR4
+        [HttpGet("{id:int}")]
+        public ActionResult<Asset> GetById(int id)
+        {
+            var asset = _service.GetById(id);
+            return asset == null ? NotFound($"Ativo com ID {id} não encontrado.") : Ok(asset);
+        }
+        /*
         [HttpGet("{symbol}")]
         public ActionResult<Asset> GetBySymbol(string symbol)
         {
@@ -32,45 +38,64 @@ namespace Portifolio.Controllers.Controllers
                 return NotFound($"Ativo '{symbol}' não encontrado.");
 
             return Ok(asset);
+        }*/
+
+        [HttpGet("search")]
+        public ActionResult<Asset> Search([FromQuery] string symbol)
+        {
+            if (string.IsNullOrWhiteSpace(symbol))
+                return BadRequest("Símbolo não pode estar vazio.");
+
+            var asset = _service.GetBySymbol(symbol);
+            return asset == null ? NotFound($"Ativo '{symbol}' não encontrado.") : Ok(asset);
         }
 
-        // POST: api/assets
         [HttpPost]
-        public ActionResult<Asset> Create([FromBody] Asset asset)
+        public IActionResult Create([FromBody] Asset asset)
         {
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
 
-            var created = _service.Create(asset);
-            if (!created)
-                return Conflict($"O ativo '{asset.Symbol}' já existe.");
+            var result = _service.Create(asset);
+            if (!result.success)
+                return Conflict(result.message);
 
-            return CreatedAtAction(nameof(GetBySymbol), new { symbol = asset.Symbol }, asset);
+            return CreatedAtAction(nameof(GetById), new { id = asset.Id }, asset);
         }
-
-        // PUT: api/assets/PETR4
-        [HttpPut("{symbol}")]
-        public IActionResult Update(string symbol, [FromBody] Asset updatedAsset)
+        /*
+        [HttpPut("{id:int}")]
+        public IActionResult Update(int id, [FromBody] Asset updatedAsset)
         {
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
 
-            var updated = _service.Update(symbol, updatedAsset);
-            if (!updated)
-                return NotFound($"Ativo '{symbol}' não encontrado.");
+            var result = _service.Update(id, updatedAsset);
+            if (!result.success)
+                return NotFound(result.message);
 
-            return NoContent();
+            return Ok(result.message);
         }
-
-        // DELETE: api/assets/PETR4
-        [HttpDelete("{symbol}")]
-        public IActionResult Delete(string symbol)
+        */
+        [HttpPut("{id:int}/price")]
+        public IActionResult UpdatePrice(int id, [FromBody] double newPrice)
         {
-            var deleted = _service.Delete(symbol);
-            if (!deleted)
-                return NotFound($"Ativo '{symbol}' não encontrado.");
+            var result = _service.UpdatePrice(id, newPrice);
+            if (!result.success)
+                return BadRequest(result.message);
 
-            return NoContent();
+            return Ok(result.message);
         }
+
+        /*caso precise deletar um ativo
+        [HttpDelete("{id:int}")]
+        public IActionResult Delete(int id)
+        {
+            var result = _service.Delete(id);
+            if (!result.success)
+                return NotFound(result.message);
+
+            return Ok(result.message);
+        }
+        */
     }
 }

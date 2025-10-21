@@ -1,19 +1,25 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.ComponentModel.DataAnnotations;
 
 namespace Portifolio.Models.Models
 {
     public class Portfolio
     {
         [Key]
+        public int Id { get; set; }
+
+        [Required]
+        [StringLength(100)]
         public string Name { get; set; } = string.Empty;
+
+        [Required]
+        [StringLength(50)]
         public string UserId { get; set; } = string.Empty;
+
+        [Range(0.01, double.MaxValue)]
         public double TotalInvestment { get; set; }
-        public DateTime CreatedAt { get; set; }
-        public List<Position> Positions { get; set; } = new();
+
+        public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
+
+        public ICollection<Position> Positions { get; set; } = new List<Position>();
     }
 }

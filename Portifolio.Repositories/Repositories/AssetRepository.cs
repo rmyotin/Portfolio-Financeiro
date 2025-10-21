@@ -14,6 +14,7 @@ namespace Portifolio.Repositories.Repositories
 
         public IEnumerable<Asset> GetAll() => _context.Assets.ToList();
 
+        public Asset? GetById(int id) => _context.Assets.Find(id);
         public Asset? GetBySymbol(string symbol)
         {
             return _context.Assets.FirstOrDefault(a => a.Symbol.Equals(symbol, StringComparison.OrdinalIgnoreCase));
@@ -41,9 +42,8 @@ namespace Portifolio.Repositories.Repositories
             }
         }
 
-        public bool Exists(string symbol)
-        {
-            return _context.Assets.Any(a => a.Symbol.Equals(symbol, StringComparison.OrdinalIgnoreCase));
-        }
+        public bool Exists(int id) => _context.Assets.Any(a => a.Id == id);
+
+        public bool ExistsBySymbol(string symbol) => _context.Assets.Any(a => a.Symbol.Equals(symbol, StringComparison.OrdinalIgnoreCase));
     }
 }
