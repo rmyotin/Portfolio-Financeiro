@@ -64,6 +64,10 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "Microsoft.EntityFrameworkCore.InMemory": {
+              "target": "Package",
+              "version": "[9.0.10, )"
+            },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[6.6.2, )"
@@ -266,7 +270,14 @@
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "D:\\PROJETOS\\BNY\\Portfolio-Financeiro\\Portifolio.Infrastructure\\Portifolio.Infrastructure.csproj": {
+                "projectPath": "D:\\PROJETOS\\BNY\\Portfolio-Financeiro\\Portifolio.Infrastructure\\Portifolio.Infrastructure.csproj"
+              },
+              "D:\\PROJETOS\\BNY\\Portfolio-Financeiro\\Portifolio.Models\\Portifolio.Models.csproj": {
+                "projectPath": "D:\\PROJETOS\\BNY\\Portfolio-Financeiro\\Portifolio.Models\\Portifolio.Models.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
@@ -332,7 +343,14 @@
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "D:\\PROJETOS\\BNY\\Portfolio-Financeiro\\Portifolio.Models\\Portifolio.Models.csproj": {
+                "projectPath": "D:\\PROJETOS\\BNY\\Portfolio-Financeiro\\Portifolio.Models\\Portifolio.Models.csproj"
+              },
+              "D:\\PROJETOS\\BNY\\Portfolio-Financeiro\\Portifolio.Repositories\\Portifolio.Repositories.csproj": {
+                "projectPath": "D:\\PROJETOS\\BNY\\Portfolio-Financeiro\\Portifolio.Repositories\\Portifolio.Repositories.csproj"
+              }
+            }
           }
         },
         "warningProperties": {

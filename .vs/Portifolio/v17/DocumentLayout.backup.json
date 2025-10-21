@@ -3,12 +3,36 @@
   "WorkspaceRootPath": "D:\\PROJETOS\\BNY\\Portfolio-Financeiro\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C8343903-4F0C-4946-AD09-9D201030342C}|Portifolio.Infrastructure\\Portifolio.Infrastructure.csproj|d:\\projetos\\bny\\portfolio-financeiro\\portifolio.infrastructure\\data\\dataseeder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C8343903-4F0C-4946-AD09-9D201030342C}|Portifolio.Infrastructure\\Portifolio.Infrastructure.csproj|solutionrelative:portifolio.infrastructure\\data\\dataseeder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{C8343903-4F0C-4946-AD09-9D201030342C}|Portifolio.Infrastructure\\Portifolio.Infrastructure.csproj|d:\\projetos\\bny\\portfolio-financeiro\\portifolio.infrastructure\\context\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C8343903-4F0C-4946-AD09-9D201030342C}|Portifolio.Infrastructure\\Portifolio.Infrastructure.csproj|solutionrelative:portifolio.infrastructure\\context\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4A126C1C-9003-4F59-851F-75A099FE8543}|Portifolio.Models\\Portifolio.Models.csproj|d:\\projetos\\bny\\portfolio-financeiro\\portifolio.models\\models\\position.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4A126C1C-9003-4F59-851F-75A099FE8543}|Portifolio.Models\\Portifolio.Models.csproj|solutionrelative:portifolio.models\\models\\position.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4A126C1C-9003-4F59-851F-75A099FE8543}|Portifolio.Models\\Portifolio.Models.csproj|d:\\projetos\\bny\\portfolio-financeiro\\portifolio.models\\models\\portfolio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4A126C1C-9003-4F59-851F-75A099FE8543}|Portifolio.Models\\Portifolio.Models.csproj|solutionrelative:portifolio.models\\models\\portfolio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4A126C1C-9003-4F59-851F-75A099FE8543}|Portifolio.Models\\Portifolio.Models.csproj|d:\\projetos\\bny\\portfolio-financeiro\\portifolio.models\\models\\asset.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4A126C1C-9003-4F59-851F-75A099FE8543}|Portifolio.Models\\Portifolio.Models.csproj|solutionrelative:portifolio.models\\models\\asset.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0F4CFB4D-8A5E-4928-B983-9A098F4CE58A}|Portifolio.Controllers\\Portifolio.Controllers.csproj|d:\\projetos\\bny\\portfolio-financeiro\\portifolio.controllers\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0F4CFB4D-8A5E-4928-B983-9A098F4CE58A}|Portifolio.Controllers\\Portifolio.Controllers.csproj|solutionrelative:portifolio.controllers\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0F4CFB4D-8A5E-4928-B983-9A098F4CE58A}|Portifolio.Controllers\\Portifolio.Controllers.csproj|d:\\projetos\\bny\\portfolio-financeiro\\portifolio.controllers\\controllers\\assetscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0F4CFB4D-8A5E-4928-B983-9A098F4CE58A}|Portifolio.Controllers\\Portifolio.Controllers.csproj|solutionrelative:portifolio.controllers\\controllers\\assetscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E12EE13C-D822-4D43-B8AE-D02A914B9683}|Portifolio.Services\\Portifolio.Services.csproj|d:\\projetos\\bny\\portfolio-financeiro\\portifolio.services\\services\\assetservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E12EE13C-D822-4D43-B8AE-D02A914B9683}|Portifolio.Services\\Portifolio.Services.csproj|solutionrelative:portifolio.services\\services\\assetservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C8343903-4F0C-4946-AD09-9D201030342C}|Portifolio.Infrastructure\\Portifolio.Infrastructure.csproj|d:\\projetos\\bny\\portfolio-financeiro\\portifolio.infrastructure\\data\\dataseeder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C8343903-4F0C-4946-AD09-9D201030342C}|Portifolio.Infrastructure\\Portifolio.Infrastructure.csproj|solutionrelative:portifolio.infrastructure\\data\\dataseeder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C8343903-4F0C-4946-AD09-9D201030342C}|Portifolio.Infrastructure\\Portifolio.Infrastructure.csproj|d:\\projetos\\bny\\portfolio-financeiro\\portifolio.infrastructure\\portifolio.infrastructure.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
@@ -26,7 +50,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 9,
           "Children": [
             {
               "$type": "Bookmark",
@@ -38,7 +62,85 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
+              "Title": "Position.cs",
+              "DocumentMoniker": "D:\\PROJETOS\\BNY\\Portfolio-Financeiro\\Portifolio.Models\\Models\\Position.cs",
+              "RelativeDocumentMoniker": "Portifolio.Models\\Models\\Position.cs",
+              "ToolTip": "D:\\PROJETOS\\BNY\\Portfolio-Financeiro\\Portifolio.Models\\Models\\Position.cs",
+              "RelativeToolTip": "Portifolio.Models\\Models\\Position.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-21T12:29:07.485Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Portfolio.cs",
+              "DocumentMoniker": "D:\\PROJETOS\\BNY\\Portfolio-Financeiro\\Portifolio.Models\\Models\\Portfolio.cs",
+              "RelativeDocumentMoniker": "Portifolio.Models\\Models\\Portfolio.cs",
+              "ToolTip": "D:\\PROJETOS\\BNY\\Portfolio-Financeiro\\Portifolio.Models\\Models\\Portfolio.cs",
+              "RelativeToolTip": "Portifolio.Models\\Models\\Portfolio.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-21T12:27:56.158Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Asset.cs",
+              "DocumentMoniker": "D:\\PROJETOS\\BNY\\Portfolio-Financeiro\\Portifolio.Models\\Models\\Asset.cs",
+              "RelativeDocumentMoniker": "Portifolio.Models\\Models\\Asset.cs",
+              "ToolTip": "D:\\PROJETOS\\BNY\\Portfolio-Financeiro\\Portifolio.Models\\Models\\Asset.cs",
+              "RelativeToolTip": "Portifolio.Models\\Models\\Asset.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAA6AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-21T12:26:39.928Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\PROJETOS\\BNY\\Portfolio-Financeiro\\Portifolio.Controllers\\Program.cs",
+              "RelativeDocumentMoniker": "Portifolio.Controllers\\Program.cs",
+              "ToolTip": "D:\\PROJETOS\\BNY\\Portfolio-Financeiro\\Portifolio.Controllers\\Program.cs",
+              "RelativeToolTip": "Portifolio.Controllers\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-21T12:20:32.501Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "AssetsController.cs",
+              "DocumentMoniker": "D:\\PROJETOS\\BNY\\Portfolio-Financeiro\\Portifolio.Controllers\\Controllers\\AssetsController.cs",
+              "RelativeDocumentMoniker": "Portifolio.Controllers\\Controllers\\AssetsController.cs",
+              "ToolTip": "D:\\PROJETOS\\BNY\\Portfolio-Financeiro\\Portifolio.Controllers\\Controllers\\AssetsController.cs",
+              "RelativeToolTip": "Portifolio.Controllers\\Controllers\\AssetsController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEkAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-21T12:19:30.347Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "AssetService.cs",
+              "DocumentMoniker": "D:\\PROJETOS\\BNY\\Portfolio-Financeiro\\Portifolio.Services\\Services\\AssetService.cs",
+              "RelativeDocumentMoniker": "Portifolio.Services\\Services\\AssetService.cs",
+              "ToolTip": "D:\\PROJETOS\\BNY\\Portfolio-Financeiro\\Portifolio.Services\\Services\\AssetService.cs",
+              "RelativeToolTip": "Portifolio.Services\\Services\\AssetService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADEAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-21T12:13:37.102Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
               "Title": "DataSeeder.cs",
               "DocumentMoniker": "D:\\PROJETOS\\BNY\\Portfolio-Financeiro\\Portifolio.Infrastructure\\Data\\DataSeeder.cs",
               "RelativeDocumentMoniker": "Portifolio.Infrastructure\\Data\\DataSeeder.cs",
@@ -51,21 +153,21 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "AppDbContext.cs",
               "DocumentMoniker": "D:\\PROJETOS\\BNY\\Portfolio-Financeiro\\Portifolio.Infrastructure\\Context\\AppDbContext.cs",
               "RelativeDocumentMoniker": "Portifolio.Infrastructure\\Context\\AppDbContext.cs",
               "ToolTip": "D:\\PROJETOS\\BNY\\Portfolio-Financeiro\\Portifolio.Infrastructure\\Context\\AppDbContext.cs",
               "RelativeToolTip": "Portifolio.Infrastructure\\Context\\AppDbContext.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-21T11:55:42.345Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Portifolio.Infrastructure",
+              "DocumentIndex": 8,
+              "Title": "Portifolio.Infrastructure.csproj",
               "DocumentMoniker": "D:\\PROJETOS\\BNY\\Portfolio-Financeiro\\Portifolio.Infrastructure\\Portifolio.Infrastructure.csproj",
               "RelativeDocumentMoniker": "Portifolio.Infrastructure\\Portifolio.Infrastructure.csproj",
               "ToolTip": "D:\\PROJETOS\\BNY\\Portfolio-Financeiro\\Portifolio.Infrastructure\\Portifolio.Infrastructure.csproj",
@@ -77,7 +179,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 9,
               "Title": "SeedData.cs",
               "DocumentMoniker": "D:\\PROJETOS\\BNY\\Portfolio-Financeiro\\Portifolio.Models\\Models\\SeedData.cs",
               "RelativeDocumentMoniker": "Portifolio.Models\\Models\\SeedData.cs",

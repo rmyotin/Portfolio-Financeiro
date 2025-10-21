@@ -1,0 +1,49 @@
+﻿using Portifolio.Infrastructure.Context;
+using Portifolio.Models.Models;
+
+namespace Portifolio.Repositories.Repositories
+{
+    public class AssetRepository
+    {
+        private readonly AppDbContext _context;
+
+        public AssetRepository(AppDbContext context)
+        {
+            _context = context;
+        }
+
+        public IEnumerable<Asset> GetAll() => _context.Assets.ToList();
+
+        public Asset? GetBySymbol(string symbol)
+        {
+            return _context.Assets.FirstOrDefault(a => a.Symbol.Equals(symbol, StringComparison.OrdinalIgnoreCase));
+        }
+
+        public void Add(Asset asset)
+        {
+            _context.Assets.Add(asset);
+            _context.SaveChanges();
+        }
+
+        public void Update(Asset asset)
+        {
+            _context.Assets.Update(asset);
+            _context.SaveChanges();
+        }
+
+        public void Delete(string symbol)
+        {
+            var existing = GetBySymbol(symbol);
+            if (existing != null)
+            {
+                _context.Assets.Remove(existing);
+                _context.SaveChanges();
+            }
+        }
+
+        public bool Exists(string symbol)
+        {
+            return _context.Assets.Any(a => a.Symbol.Equals(symbol, StringComparison.OrdinalIgnoreCase));
+        }
+    }
+}
