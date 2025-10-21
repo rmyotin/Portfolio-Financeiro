@@ -483,3 +483,15 @@ $RECYCLE.BIN/
 # Vim temporary swap files
 *.swp
 /.vs/Portifolio/DesignTimeBuild/.dtbcache.v2
+/.vs/Portifolio/v17/.suo
+/.vs/Portifolio/v17/DocumentLayout.backup.json
+/.vs/Portifolio/v17/DocumentLayout.json
+/Portifolio.Controllers/obj/Debug/net8.0/apphost.exe
+/Portifolio.Controllers/obj/Debug/net8.0/Portifolio.Controllers.AssemblyInfo.cs
+/Portifolio.Controllers/obj/Debug/net8.0/Portifolio.Controllers.AssemblyInfoInputs.cache
+/Portifolio.Controllers/obj/Debug/net8.0/Portifolio.Controllers.csproj.AssemblyReference.cache
+/Portifolio.Infrastructure/bin/Debug/net8.0/Portifolio.Infrastructure.dll
+/Portifolio.Infrastructure/bin/Debug/net8.0/Portifolio.Infrastructure.pdb
+/Portifolio.Infrastructure/bin/Debug/net8.0/Portifolio.Models.dll
+/Portifolio.Infrastructure/bin/Debug/net8.0/Portifolio.Models.pdb
+/Portifolio.Infrastructure/obj/Debug/net8.0/ref/Portifolio.Infrastructure.dll

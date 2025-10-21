@@ -3,16 +3,16 @@
   "WorkspaceRootPath": "D:\\PROJETOS\\BNY\\Portfolio-Financeiro\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{EE2CDBE0-7249-4EE0-B533-5DB2B79C038F}|Portifolio.Tests\\Portifolio.Tests.csproj|d:\\projetos\\bny\\portfolio-financeiro\\portifolio.tests\\portfolioanalyticstests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EE2CDBE0-7249-4EE0-B533-5DB2B79C038F}|Portifolio.Tests\\Portifolio.Tests.csproj|solutionrelative:portifolio.tests\\portfolioanalyticstests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{0F4CFB4D-8A5E-4928-B983-9A098F4CE58A}|Portifolio.Controllers\\Portifolio.Controllers.csproj|d:\\projetos\\bny\\portfolio-financeiro\\portifolio.controllers\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0F4CFB4D-8A5E-4928-B983-9A098F4CE58A}|Portifolio.Controllers\\Portifolio.Controllers.csproj|solutionrelative:portifolio.controllers\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4A126C1C-9003-4F59-851F-75A099FE8543}|Portifolio.Models\\Portifolio.Models.csproj|d:\\projetos\\bny\\portfolio-financeiro\\portifolio.models\\models\\portfolio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4A126C1C-9003-4F59-851F-75A099FE8543}|Portifolio.Models\\Portifolio.Models.csproj|solutionrelative:portifolio.models\\models\\portfolio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EE2CDBE0-7249-4EE0-B533-5DB2B79C038F}|Portifolio.Tests\\Portifolio.Tests.csproj|d:\\projetos\\bny\\portfolio-financeiro\\portifolio.tests\\portfolioanalyticstests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EE2CDBE0-7249-4EE0-B533-5DB2B79C038F}|Portifolio.Tests\\Portifolio.Tests.csproj|solutionrelative:portifolio.tests\\portfolioanalyticstests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E12EE13C-D822-4D43-B8AE-D02A914B9683}|Portifolio.Services\\Portifolio.Services.csproj|d:\\projetos\\bny\\portfolio-financeiro\\portifolio.services\\services\\portfolioanalyticsservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -38,24 +38,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\PROJETOS\\BNY\\Portfolio-Financeiro\\Portifolio.Controllers\\Program.cs",
               "RelativeDocumentMoniker": "Portifolio.Controllers\\Program.cs",
               "ToolTip": "D:\\PROJETOS\\BNY\\Portfolio-Financeiro\\Portifolio.Controllers\\Program.cs",
               "RelativeToolTip": "Portifolio.Controllers\\Program.cs",
-              "ViewState": "AgIAABUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-21T22:44:54.468Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "Portfolio.cs",
               "DocumentMoniker": "D:\\PROJETOS\\BNY\\Portfolio-Financeiro\\Portifolio.Models\\Models\\Portfolio.cs",
               "RelativeDocumentMoniker": "Portifolio.Models\\Models\\Portfolio.cs",
@@ -63,8 +63,7 @@
               "RelativeToolTip": "Portifolio.Models\\Models\\Portfolio.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-21T22:42:15.919Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-21T22:42:15.919Z"
             },
             {
               "$type": "Document",
@@ -76,8 +75,7 @@
               "RelativeToolTip": "Portifolio.Services\\Services\\PortfolioAnalyticsService.cs",
               "ViewState": "AgIAACQAAAAAAAAAAAAowDQAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-21T22:15:06.939Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-21T22:15:06.939Z"
             },
             {
               "$type": "Document",
@@ -89,8 +87,7 @@
               "RelativeToolTip": "Portifolio.Infrastructure\\Data\\DataSeeder.cs",
               "ViewState": "AgIAAAIAAAAAAAAAAADgvwwAAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-21T21:39:37.714Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-21T21:39:37.714Z"
             },
             {
               "$type": "Document",
@@ -106,16 +103,15 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "PortfolioAnalyticsTests.cs",
               "DocumentMoniker": "D:\\PROJETOS\\BNY\\Portfolio-Financeiro\\Portifolio.Tests\\PortfolioAnalyticsTests.cs",
               "RelativeDocumentMoniker": "Portifolio.Tests\\PortfolioAnalyticsTests.cs",
               "ToolTip": "D:\\PROJETOS\\BNY\\Portfolio-Financeiro\\Portifolio.Tests\\PortfolioAnalyticsTests.cs",
               "RelativeToolTip": "Portifolio.Tests\\PortfolioAnalyticsTests.cs",
-              "ViewState": "AgIAABwAAAAAAAAAAAAgwCsAAABTAAAAAAAAAA==",
+              "ViewState": "AgIAABwAAAAAAAAAAAAgwB4AAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-21T21:33:14.252Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-21T21:33:14.252Z"
             },
             {
               "$type": "Document",
@@ -127,8 +123,7 @@
               "RelativeToolTip": "Portifolio.Tests\\SeedDataLoader.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-21T21:27:09.6Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-21T21:27:09.6Z"
             }
           ]
         }
