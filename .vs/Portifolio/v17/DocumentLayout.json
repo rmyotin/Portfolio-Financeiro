@@ -26,16 +26,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 0,
           "Children": [
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{56df62a4-05a3-4e5b-aa1a-99371ccfb997}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
-            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
@@ -59,13 +51,12 @@
               "RelativeToolTip": "Portifolio.Infrastructure\\Context\\AppDbContext.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-21T11:55:42.345Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-21T11:55:42.345Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "Portifolio.Infrastructure",
+              "Title": "Portifolio.Infrastructure.csproj",
               "DocumentMoniker": "D:\\PROJETOS\\BNY\\Portfolio-Financeiro\\Portifolio.Infrastructure\\Portifolio.Infrastructure.csproj",
               "RelativeDocumentMoniker": "Portifolio.Infrastructure\\Portifolio.Infrastructure.csproj",
               "ToolTip": "D:\\PROJETOS\\BNY\\Portfolio-Financeiro\\Portifolio.Infrastructure\\Portifolio.Infrastructure.csproj",
@@ -85,8 +76,15 @@
               "RelativeToolTip": "Portifolio.Models\\Models\\SeedData.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-21T11:52:58.635Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-21T11:52:58.635Z"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{56df62a4-05a3-4e5b-aa1a-99371ccfb997}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
             }
           ]
         }
