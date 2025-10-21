@@ -1,9 +1,10 @@
 ﻿using Portifolio.Infrastructure.Context;
 using Portifolio.Models.Models;
+using Portifolio.Repositories.Interfaces;
 
 namespace Portifolio.Repositories.Repositories
 {
-    public class AssetRepository
+    public class AssetRepository : IAssetRepository
     {
         private readonly AppDbContext _context;
 

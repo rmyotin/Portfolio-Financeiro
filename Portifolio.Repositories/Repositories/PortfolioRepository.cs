@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Portifolio.Infrastructure.Context;
 using Portifolio.Models.Models;
+using Portifolio.Repositories.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace Portifolio.Repositories.Repositories
 {
-    public class PortfolioRepository
+    public class PortfolioRepository : IPortfolioRepository
     {
         private readonly AppDbContext _context;
 

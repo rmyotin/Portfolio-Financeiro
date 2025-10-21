@@ -1,7 +1,9 @@
 using Microsoft.EntityFrameworkCore;
 using Portifolio.Infrastructure.Context;
 using Portifolio.Infrastructure.Data;
+using Portifolio.Repositories.Interfaces;
 using Portifolio.Repositories.Repositories;
+using Portifolio.Services.Interfaces;
 using Portifolio.Services.Services;
 var builder = WebApplication.CreateBuilder(args);
 
@@ -14,11 +16,11 @@ builder.Services.AddSwaggerGen();
 
 builder.Services.AddDbContext<AppDbContext>(opt => opt.UseInMemoryDatabase("PortifolioDB"));
 
-builder.Services.AddScoped<AssetRepository>();
-builder.Services.AddScoped<AssetService>();
+builder.Services.AddScoped<IAssetRepository, AssetRepository>();
+builder.Services.AddScoped<IAssetService, AssetService>();
 
-builder.Services.AddScoped<PortfolioRepository>();
-builder.Services.AddScoped<PortfolioService>();
+builder.Services.AddScoped<IPortfolioRepository, PortfolioRepository>();
+builder.Services.AddScoped<IPortfolioService, PortfolioService>();
 
 
 var app = builder.Build();

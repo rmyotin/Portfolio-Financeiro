@@ -1,13 +1,14 @@
 ﻿using Portifolio.Models.Models;
-using Portifolio.Repositories.Repositories;
+using Portifolio.Repositories.Interfaces;
+using Portifolio.Services.Interfaces;
 
 namespace Portifolio.Services.Services
 {
-    public class AssetService
+    public class AssetService : IAssetService
     {
-        private readonly AssetRepository _repository;
+        private readonly IAssetRepository _repository;
 
-        public AssetService(AssetRepository repository)
+        public AssetService(IAssetRepository repository)
         {
             _repository = repository;
         }
@@ -68,6 +69,11 @@ namespace Portifolio.Services.Services
 
             _repository.Delete(existing.Symbol);
             return (true, "Ativo excluído com sucesso.");
+        }
+
+        public (bool success, string message) Delete(string symbol)
+        {
+            throw new NotImplementedException();
         }
     }
 }

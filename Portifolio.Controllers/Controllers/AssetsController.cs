@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Portifolio.Models.Models;
+using Portifolio.Services.Interfaces;
 using Portifolio.Services.Services;
 
 namespace Portifolio.Controllers.Controllers
@@ -8,9 +9,9 @@ namespace Portifolio.Controllers.Controllers
     [Route("api/[controller]")]
     public class AssetsController : ControllerBase
     {
-        private readonly AssetService _service;
+        private readonly IAssetService _service;
 
-        public AssetsController(AssetService service)
+        public AssetsController(IAssetService service)
         {
             _service = service;
         }

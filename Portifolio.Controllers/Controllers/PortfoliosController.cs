@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Portifolio.Models.Models;
-using Portifolio.Services.Services;
+using Portifolio.Services.Interfaces;
 
 namespace Portifolio.Controllers.Controllers
 {
@@ -8,9 +8,9 @@ namespace Portifolio.Controllers.Controllers
     [Route("api/[controller]")]
     public class PortfoliosController : ControllerBase
     {
-        private readonly PortfolioService _service;
+        private readonly IPortfolioService _service;
 
-        public PortfoliosController(PortfolioService service)
+        public PortfoliosController(IPortfolioService service)
         {
             _service = service;
         }

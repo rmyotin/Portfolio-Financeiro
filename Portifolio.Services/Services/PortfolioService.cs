@@ -1,19 +1,15 @@
 ﻿using Portifolio.Models.Models;
-using Portifolio.Repositories.Repositories;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using Portifolio.Repositories.Interfaces;
+using Portifolio.Services.Interfaces;
 
 namespace Portifolio.Services.Services
 {
-    public class PortfolioService
+    public class PortfolioService : IPortfolioService
     {
-        private readonly PortfolioRepository _repository;
-        private readonly AssetRepository _assetRepository;
+        private readonly IPortfolioRepository _repository;
+        private readonly IAssetRepository _assetRepository;
 
-        public PortfolioService(PortfolioRepository repository, AssetRepository assetRepository)
+        public PortfolioService(IPortfolioRepository repository, IAssetRepository assetRepository)
         {
             _repository = repository;
             _assetRepository = assetRepository;
