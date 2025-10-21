@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Portifolio.Services")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6a847606bac1d45cd4b9438ececa5067ebd44640")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+fd5c98c176c56d7635f8a1a72a3935fb997725f9")]
 [assembly: System.Reflection.AssemblyProductAttribute("Portifolio.Services")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Portifolio.Services")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

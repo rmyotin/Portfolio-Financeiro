@@ -1,7 +1,32 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "D:\\PROJETOS\\BNY\\Portfolio-Financeiro\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{0F4CFB4D-8A5E-4928-B983-9A098F4CE58A}|Portifolio.Controllers\\Portifolio.Controllers.csproj|d:\\projetos\\bny\\portfolio-financeiro\\portifolio.controllers\\controllers\\assetscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0F4CFB4D-8A5E-4928-B983-9A098F4CE58A}|Portifolio.Controllers\\Portifolio.Controllers.csproj|solutionrelative:portifolio.controllers\\controllers\\assetscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0F4CFB4D-8A5E-4928-B983-9A098F4CE58A}|Portifolio.Controllers\\Portifolio.Controllers.csproj|d:\\projetos\\bny\\portfolio-financeiro\\portifolio.controllers\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0F4CFB4D-8A5E-4928-B983-9A098F4CE58A}|Portifolio.Controllers\\Portifolio.Controllers.csproj|solutionrelative:portifolio.controllers\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E12EE13C-D822-4D43-B8AE-D02A914B9683}|Portifolio.Services\\Portifolio.Services.csproj|d:\\projetos\\bny\\portfolio-financeiro\\portifolio.services\\services\\portfolioservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E12EE13C-D822-4D43-B8AE-D02A914B9683}|Portifolio.Services\\Portifolio.Services.csproj|solutionrelative:portifolio.services\\services\\portfolioservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E12EE13C-D822-4D43-B8AE-D02A914B9683}|Portifolio.Services\\Portifolio.Services.csproj|d:\\projetos\\bny\\portfolio-financeiro\\portifolio.services\\services\\assetservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E12EE13C-D822-4D43-B8AE-D02A914B9683}|Portifolio.Services\\Portifolio.Services.csproj|solutionrelative:portifolio.services\\services\\assetservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E12EE13C-D822-4D43-B8AE-D02A914B9683}|Portifolio.Services\\Portifolio.Services.csproj|d:\\projetos\\bny\\portfolio-financeiro\\portifolio.services\\interfaces\\iassetservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E12EE13C-D822-4D43-B8AE-D02A914B9683}|Portifolio.Services\\Portifolio.Services.csproj|solutionrelative:portifolio.services\\interfaces\\iassetservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E12EE13C-D822-4D43-B8AE-D02A914B9683}|Portifolio.Services\\Portifolio.Services.csproj|d:\\projetos\\bny\\portfolio-financeiro\\portifolio.services\\interfaces\\iportfolioservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E12EE13C-D822-4D43-B8AE-D02A914B9683}|Portifolio.Services\\Portifolio.Services.csproj|solutionrelative:portifolio.services\\interfaces\\iportfolioservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,8 +34,86 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 0,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AssetsController.cs",
+              "DocumentMoniker": "D:\\PROJETOS\\BNY\\Portfolio-Financeiro\\Portifolio.Controllers\\Controllers\\AssetsController.cs",
+              "RelativeDocumentMoniker": "Portifolio.Controllers\\Controllers\\AssetsController.cs",
+              "ToolTip": "D:\\PROJETOS\\BNY\\Portfolio-Financeiro\\Portifolio.Controllers\\Controllers\\AssetsController.cs",
+              "RelativeToolTip": "Portifolio.Controllers\\Controllers\\AssetsController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-21T15:46:31.388Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\PROJETOS\\BNY\\Portfolio-Financeiro\\Portifolio.Controllers\\Program.cs",
+              "RelativeDocumentMoniker": "Portifolio.Controllers\\Program.cs",
+              "ToolTip": "D:\\PROJETOS\\BNY\\Portfolio-Financeiro\\Portifolio.Controllers\\Program.cs",
+              "RelativeToolTip": "Portifolio.Controllers\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-21T15:46:16.447Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "PortfolioService.cs",
+              "DocumentMoniker": "D:\\PROJETOS\\BNY\\Portfolio-Financeiro\\Portifolio.Services\\Services\\PortfolioService.cs",
+              "RelativeDocumentMoniker": "Portifolio.Services\\Services\\PortfolioService.cs",
+              "ToolTip": "D:\\PROJETOS\\BNY\\Portfolio-Financeiro\\Portifolio.Services\\Services\\PortfolioService.cs",
+              "RelativeToolTip": "Portifolio.Services\\Services\\PortfolioService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-21T15:46:05.879Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "AssetService.cs",
+              "DocumentMoniker": "D:\\PROJETOS\\BNY\\Portfolio-Financeiro\\Portifolio.Services\\Services\\AssetService.cs",
+              "RelativeDocumentMoniker": "Portifolio.Services\\Services\\AssetService.cs",
+              "ToolTip": "D:\\PROJETOS\\BNY\\Portfolio-Financeiro\\Portifolio.Services\\Services\\AssetService.cs",
+              "RelativeToolTip": "Portifolio.Services\\Services\\AssetService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-21T15:45:56.262Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "IPortfolioService.cs",
+              "DocumentMoniker": "D:\\PROJETOS\\BNY\\Portfolio-Financeiro\\Portifolio.Services\\Interfaces\\IPortfolioService.cs",
+              "RelativeDocumentMoniker": "Portifolio.Services\\Interfaces\\IPortfolioService.cs",
+              "ToolTip": "D:\\PROJETOS\\BNY\\Portfolio-Financeiro\\Portifolio.Services\\Interfaces\\IPortfolioService.cs",
+              "RelativeToolTip": "Portifolio.Services\\Interfaces\\IPortfolioService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-21T15:45:42.463Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "IAssetService.cs",
+              "DocumentMoniker": "D:\\PROJETOS\\BNY\\Portfolio-Financeiro\\Portifolio.Services\\Interfaces\\IAssetService.cs",
+              "RelativeDocumentMoniker": "Portifolio.Services\\Interfaces\\IAssetService.cs",
+              "ToolTip": "D:\\PROJETOS\\BNY\\Portfolio-Financeiro\\Portifolio.Services\\Interfaces\\IAssetService.cs",
+              "RelativeToolTip": "Portifolio.Services\\Interfaces\\IAssetService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-21T15:45:34.693Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"

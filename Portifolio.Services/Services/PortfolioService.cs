@@ -4,6 +4,7 @@ using Portifolio.Services.Interfaces;
 
 namespace Portifolio.Services.Services
 {
+
     public class PortfolioService : IPortfolioService
     {
         private readonly IPortfolioRepository _repository;

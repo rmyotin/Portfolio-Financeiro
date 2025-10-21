@@ -14,5 +14,6 @@ namespace Portifolio.Services.Interfaces
         (bool success, string message) RemovePosition(int positionId);
         double CalculateTotalValue(Portfolio portfolio);
         double CalculateReturnPercent(Portfolio portfolio);
+
     }
 }

@@ -17,7 +17,9 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddDbContext<AppDbContext>(opt => opt.UseInMemoryDatabase("PortifolioDB"));
 
 builder.Services.AddScoped<IAssetRepository, AssetRepository>();
+
 builder.Services.AddScoped<IAssetService, AssetService>();
+
 
 builder.Services.AddScoped<IPortfolioRepository, PortfolioRepository>();
 builder.Services.AddScoped<IPortfolioService, PortfolioService>();

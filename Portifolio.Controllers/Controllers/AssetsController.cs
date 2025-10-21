@@ -7,6 +7,7 @@ namespace Portifolio.Controllers.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
+
     public class AssetsController : ControllerBase
     {
         private readonly IAssetService _service;
