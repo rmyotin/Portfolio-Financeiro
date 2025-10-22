@@ -240,14 +240,3 @@ Desenvolvedor .NET
 💼 [https://github.com/rmyotin/Portfolio-Financeiro](https://github.com/rmyotin/Portfolio-Financeiro)
 
 ---
-
-## 🏁 **Comandos de Entrega**
-
-```bash
-dotnet clean
-dotnet build
-dotnet test
-git add .
-git commit -m "Entrega final - Portfolio API"
-git push origin main
-```
