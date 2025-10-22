@@ -217,16 +217,6 @@ Todas as datas seguem o padrão **ISO 8601 (`yyyy-MM-dd`)**
 
 ---
 
-## 📸 **Swagger e Testes**
-
-![Swagger Screenshot](https://github.com/rmyotin/Portfolio-Financeiro/raw/main/docs/swagger.png)
-
-![Tests Screenshot](https://github.com/rmyotin/Portfolio-Financeiro/raw/main/docs/tests.png)
-
-*(Adicione suas capturas em `/docs/` se desejar que apareçam no README do GitHub.)*
-
----
-
 ## ✅ **Status Final**
 
 | Requisito | Status |
@@ -245,7 +235,7 @@ Todas as datas seguem o padrão **ISO 8601 (`yyyy-MM-dd`)**
 ## 🧠 **Autor**
 
 **Rodrigo Myotin**  
-Desenvolvedor .NET | Pós-graduação em Cybersecurity  
+Desenvolvedor .NET
 📧 [myotin@yahoo.com.br](mailto:myotin@yahoo.com.br)  
 💼 [https://github.com/rmyotin/Portfolio-Financeiro](https://github.com/rmyotin/Portfolio-Financeiro)
 
