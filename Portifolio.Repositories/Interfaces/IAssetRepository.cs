@@ -17,6 +17,7 @@ namespace Portifolio.Repositories.Interfaces
         void Delete(string symbol);
         bool Exists(int id);
         bool ExistsBySymbol(string symbol);
+        List<PriceHistory>? GetPriceHistory(string symbol);
 
 
     }

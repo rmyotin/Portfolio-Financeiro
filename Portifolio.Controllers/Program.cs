@@ -5,6 +5,8 @@ using Portifolio.Repositories.Interfaces;
 using Portifolio.Repositories.Repositories;
 using Portifolio.Services.Interfaces;
 using Portifolio.Services.Services;
+using System.Reflection;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -24,6 +26,13 @@ builder.Services.AddScoped<IPortfolioService, PortfolioService>();
 
 builder.Services.AddScoped<IPortfolioAnalyticsService, PortfolioAnalyticsService>();
 
+var xmlFile = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
+var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
+
+builder.Services.AddSwaggerGen(options =>
+{
+    options.IncludeXmlComments(xmlPath);
+});
 
 var app = builder.Build();
 

@@ -161,5 +161,82 @@ namespace Portifolio.Services.Services
             };
 
         }
+
+        public CorrelationResult GetAssetCorrelations(Portfolio portfolio)
+        {
+            var correlations = new List<AssetCorrelation>();
+
+            // Carrega lista de ativos únicos do portfólio
+            var symbols = portfolio.Positions
+                .Select(p => p.AssetSymbol)
+                .Distinct()
+                .ToList();
+
+            // Para cada par único de ativos (A, B)
+            for (int i = 0; i < symbols.Count; i++)
+            {
+                for (int j = i + 1; j < symbols.Count; j++)
+                {
+                    string assetA = symbols[i];
+                    string assetB = symbols[j];
+
+                    var historyA = _assetRepository.GetPriceHistory(assetA);
+                    var historyB = _assetRepository.GetPriceHistory(assetB);
+
+                    if (historyA == null || historyB == null) continue;
+
+                    // Garante mesmo número de observações
+                    var joined = historyA.Join(
+                        historyB,
+                        a => a.Date,
+                        b => b.Date,
+                        (a, b) => new
+                        {
+                            PriceA = a.Price,
+                            PriceB = b.Price
+                        })
+                        .ToList();
+
+                    if (joined.Count < 3) continue; // precisa de dados suficientes
+
+                    var pricesA = joined.Select(x => x.PriceA).ToList();
+                    var pricesB = joined.Select(x => x.PriceB).ToList();
+
+                    double correlation = CalculatePearsonCorrelation(pricesA, pricesB);
+
+                    correlations.Add(new AssetCorrelation(assetA, assetB, Math.Round(correlation, 3)));
+                }
+            }
+
+            return new CorrelationResult(portfolio.Name, correlations);
+        }
+
+        /// <summary>
+        /// Calcula o coeficiente de correlação de Pearson entre duas séries numéricas.
+        /// </summary>
+        private double CalculatePearsonCorrelation(List<double> xs, List<double> ys)
+        {
+            if (xs.Count != ys.Count || xs.Count < 2)
+                return 0;
+
+            double meanX = xs.Average();
+            double meanY = ys.Average();
+
+            double sumXY = 0, sumX2 = 0, sumY2 = 0;
+
+            for (int i = 0; i < xs.Count; i++)
+            {
+                double dx = xs[i] - meanX;
+                double dy = ys[i] - meanY;
+                sumXY += dx * dy;
+                sumX2 += dx * dx;
+                sumY2 += dy * dy;
+            }
+
+            double denominator = Math.Sqrt(sumX2 * sumY2);
+            if (denominator == 0) return 0;
+
+            return sumXY / denominator;
+        }
     }
 }

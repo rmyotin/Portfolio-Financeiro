@@ -9,5 +9,6 @@ namespace Portifolio.Services.Interfaces
         RiskAnalysisResult GetRiskAnalysis(Portfolio portfolio);
         RebalancingResult GetRebalancing(Portfolio portfolio);
         object GetDiversification(Portfolio portfolio);
+        CorrelationResult GetAssetCorrelations(Portfolio portfolio);
     }
 }

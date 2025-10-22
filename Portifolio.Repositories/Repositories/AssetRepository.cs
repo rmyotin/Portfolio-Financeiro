@@ -45,5 +45,11 @@ namespace Portifolio.Repositories.Repositories
         public bool Exists(int id) => _context.Assets.Any(a => a.Id == id);
 
         public bool ExistsBySymbol(string symbol) => _context.Assets.Any(a => a.Symbol.Equals(symbol, StringComparison.OrdinalIgnoreCase));
+
+        public List<PriceHistory>? GetPriceHistory(string symbol)
+        {
+            var asset = _context.Assets.FirstOrDefault(a => a.Symbol == symbol);
+            return asset?.PriceHistory;
+        }
     }
 }

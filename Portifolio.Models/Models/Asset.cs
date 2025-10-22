@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Portifolio.Models.Models
 {
@@ -27,5 +28,8 @@ namespace Portifolio.Models.Models
         public double CurrentPrice { get; set; }
 
         public DateTime LastUpdated { get; set; } = DateTime.UtcNow;
+
+        [NotMapped]
+        public List<PriceHistory> PriceHistory { get; set; } = new();
     }
 }

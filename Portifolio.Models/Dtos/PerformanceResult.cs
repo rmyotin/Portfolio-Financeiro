@@ -30,4 +30,19 @@ namespace Portifolio.Models.Dtos
         double VolatilityPercent,
         double SharpeRatio,
         double LargestAssetConcentrationPercent);
+
+    /// <summary>
+    /// Representa a correlação estatística entre ativos de um portfólio.
+    /// </summary>
+    public record CorrelationResult(
+        string Portfolio,
+        List<AssetCorrelation> Correlations);
+
+    /// <summary>
+    /// Correlação de Pearson entre dois ativos.
+    /// </summary>
+    public record AssetCorrelation(
+        string AssetA,
+        string AssetB,
+        double CorrelationCoefficient);
 }

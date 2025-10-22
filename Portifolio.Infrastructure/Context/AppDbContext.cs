@@ -20,6 +20,8 @@ namespace Portifolio.Infrastructure.Context
                         .HasForeignKey(pos => pos.PortfolioId)
                         .OnDelete(DeleteBehavior.Cascade);
 
+            modelBuilder.Entity<PriceHistory>().HasNoKey();
+
             base.OnModelCreating(modelBuilder);
         }
     }
