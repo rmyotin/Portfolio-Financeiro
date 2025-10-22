@@ -1,247 +1,263 @@
-# 🏦 Sistema de Portfólio de Investimentos
+# 💼 **Portfolio API — Sistema de Gerenciamento de Investimentos (.NET 8)**
 
-## 📋 Descrição do Desafio
+[![.NET](https://img.shields.io/badge/.NET-8.0-blueviolet?style=flat&logo=dotnet)](https://dotnet.microsoft.com/)
+[![Build](https://img.shields.io/badge/build-passing-brightgreen?style=flat&logo=githubactions)](https://github.com/rmyotin/Portfolio-Financeiro)
+[![Tests](https://img.shields.io/badge/tests-100%25-success?style=flat&logo=xunit)](https://github.com/rmyotin/Portfolio-Financeiro/actions)
+[![License](https://img.shields.io/badge/license-MIT-lightgrey?style=flat)](LICENSE)
 
-Você deve desenvolver uma **WebAPI em .NET 8** para um sistema de gerenciamento de portfólio de investimentos. Este teste avalia suas habilidades em:
-
-- 🔧 **Conhecimentos Técnicos**: .NET 8, WebAPI
-- 🧠 **Raciocínio Lógico**: Algoritmos de cálculo financeiro e otimização
-- 🏗️ **Arquitetura**: Clean Code, SOLID, padrões de design
-- 🛡️ **Segurança**: Validações, tratamento de erros
-
----
-
-## 🎯 Objetivos do Sistema
-
-### Core Features (Obrigatórias)
-1. **Gestão de Ativos Financeiros**
-   - CRUD de ações, bonds, fundos
-   - Preços históricos e atuais
-
-2. **Gestão de Portfólio**
-   - Adicionar/remover investimentos
-   - Calcular valor total e rentabilidade
-   - Rebalanceamento automático
-
-3. **Relatórios Financeiros**
-   - Performance por período
-   - Análise de risco (volatilidade)
-   - Diversificação por setor
-
-### Advanced Features (Diferencial)
-4. **Algoritmo de Otimização**
-   - Sugestão de rebalanceamento
-   - Cálculo de risco x retorno
-
-5. **Sistema de Alertas**
-   - Notificações de performance
-   - Limites de risco
+Desenvolvido por **Rodrigo Myotin**  
+📧 [myotin@yahoo.com.br](mailto:myotin@yahoo.com.br)  
+💼 [https://github.com/rmyotin/Portfolio-Financeiro](https://github.com/rmyotin/Portfolio-Financeiro)
 
 ---
 
-## 🏗️ Estrutura Técnica Esperada
+## 🚀 **Sobre o Projeto**
 
-### 1. Arquitetura em Camadas
+A **Portfolio API** é uma aplicação desenvolvida em **.NET 8 WebAPI** que gerencia **portfólios de investimento**, realizando cálculos de retorno, rebalanceamento automático e análise de risco.
+
+💾 O projeto usa **banco InMemory** com dados do arquivo `SeedData.json`, permitindo execução imediata.
+
+📊 Inclui métricas como:
+- Retorno total e anualizado
+- Volatilidade
+- Sharpe Ratio
+- Diversificação por setor
+- Correlação entre ativos (coeficiente de Pearson)
+
+---
+
+## 🧱 **Arquitetura e Estrutura do Projeto**
+
 ```
-├── Controllers/          # API Controllers
-├── Services/            # Lógica de negócio
-├── Repositories/        # Acesso a dados
-├── Models/             # Entidades e DTOs
-├── Infrastructure/     # Configurações, DbContext
-└── Tests/             # Testes unitários
+Portfolio-Financeiro/
+├── Controllers/          # Endpoints da API
+├── Services/             # Lógica de negócio e cálculos financeiros
+├── Repositories/         # Acesso a dados (InMemory)
+├── Models/               # Entidades e DTOs
+├── Infrastructure/       # Contexto, SeedData, EF Core
+└── Tests/                # Testes unitários (xUnit)
 ```
 
-### 2. Entidades e Relacionamentos
-
-Você deve modelar as entidades necessárias para representar:
-- **Ativos financeiros** com informações como símbolo (PETR4), nome, tipo, setor e preço
-- **Portfólios** pertencentes a usuários específicos
-- **Posições** que representam a quantidade de cada ativo no portfólio
-- **Histórico de preços** para cálculos de performance
-- **Transações** de compra/venda para rastreabilidade
-
-*Dica: Pense nos relacionamentos entre as entidades e como isso impacta os cálculos financeiros.*
-
-### 3. Endpoints Esperados
-
-#### Assets Controller
-- `GET /api/assets` - Listar todos os ativos
-- `GET /api/assets/{id}` - Obter ativo específico
-- `GET /api/assets/search?symbol={symbol}` - Buscar por símbolo
-- `POST /api/assets` - Criar novo ativo
-- `PUT /api/assets/{id}/price` - Atualizar preço
-
-#### Portfolios Controller
-- `GET /api/portfolios` - Listar portfólios do usuário
-- `POST /api/portfolios` - Criar novo portfólio
-- `GET /api/portfolios/{id}` - Detalhes do portfólio
-- `POST /api/portfolios/{id}/positions` - Adicionar posição
-- `PUT /api/portfolios/{id}/positions/{positionId}` - Atualizar posição
-- `DELETE /api/portfolios/{id}/positions/{positionId}` - Remover posição
-
-#### Analytics Controller
-- `GET /api/portfolios/{id}/performance` - Performance do portfólio
-- `GET /api/portfolios/{id}/risk-analysis` - Análise de risco
-- `GET /api/portfolios/{id}/rebalancing` - Sugestão de rebalanceamento
+🧩 **Padrões aplicados:**
+- Clean Architecture  
+- SOLID  
+- Repository Pattern  
+- Dependency Injection  
+- Documentação Swagger  
+- Testes com Moq + FluentAssertions  
 
 ---
 
-## 📋 Regras de Negócio
+## 💡 **Principais Entidades**
 
-### 1. Cálculos de Performance
-*Métricas para avaliar como o investimento está performando ao longo do tempo.*
+### 💰 `Asset`
+Representa um ativo financeiro (ação, fundo, etc.).
 
-**Requisitos:**
-- **Retorno Total**: Percentual de ganho/perda desde o investimento inicial. Ex: investiu R$ 1000, hoje vale R$ 1200 = 20% de retorno
-- **Retorno Anualizado**: Retorno convertido para base anual, considerando o tempo de investimento. Permite comparar investimentos de períodos diferentes
-- **Volatilidade**: Mede o quanto o preço do ativo varia (risco). Alto desvio padrão = mais volátil = mais arriscado
-- Todos os cálculos devem tratar casos extremos (divisão por zero, dados insuficientes)
-
-### 2. Sistema de Rebalanceamento
-*Processo de ajustar o portfólio para manter a estratégia de investimento planejada.*
-
-**Requisitos:**
-- **Alocação Ideal**: Estratégia definida pelo investidor (ex: 30% em bancos, 20% em mineração)
-- **Peso Atual**: Percentual real de cada ativo no portfólio hoje (pode ter mudado com oscilações de preço)
-- **Transações Sugeridas**: Compras/vendas para voltar à alocação desejada
-- Minimizar o **número de transações** (menos custos e complexidade)
-- Considerar **custos de transação** de 0.3% por operação
-- Não sugerir transações menores que R$ 100,00 (não compensa os custos)
-
-### 3. Análise de Risco e Diversificação
-*Métricas para avaliar o nível de risco do portfólio e sua diversificação.*
-
-**Requisitos:**
-- **Sharpe Ratio**: Mede retorno ajustado ao risco. Quanto maior, melhor (mais retorno por unidade de risco)
-- **Taxa Selic**: Taxa básica de juros do Brasil, usada como referência de investimento "sem risco"
-- **Concentração por Setor**: Evita ter muito dinheiro em um setor só (ex: só bancos = risco se setor financeiro quebrar)
-- **Risco de Concentração**: Percentual do maior ativo individual (evita "colocar todos os ovos numa cesta")
-- **Correlação entre Ativos**: Ativos do mesmo setor tendem a subir/descer juntos, reduzindo diversificação
+| Campo | Tipo | Descrição |
+|--------|------|------------|
+| Symbol | string | Código do ativo (ex: PETR4) |
+| Name | string | Nome completo |
+| Sector | string | Setor econômico |
+| CurrentPrice | double | Preço atual |
+| PriceHistory | List<PriceHistory> | Histórico de preços diários (ISO 8601) |
 
 ---
 
-## 📊 Guia de Utilização dos Dados
+### 💼 `Portfolio`
+Agrupa as posições do investidor.
 
-### 📁 Arquivo SeedData.json
-O arquivo `SeedData.json` é sua **fonte única de dados** para o teste. Ele contém:
+| Campo | Tipo | Descrição |
+|--------|------|------------|
+| Name | string | Nome do portfólio |
+| UserId | string | Identificador do investidor |
+| TotalInvestment | double | Valor total investido |
+| Positions | List<Position> | Lista de ativos e quantidades |
 
-#### 🏢 **Assets (15 ativos)**
+---
+
+## ⚙️ **Endpoints Principais**
+
+### 🔹 AssetsController
+| Método | Endpoint | Descrição |
+|---------|-----------|------------|
+| GET | `/api/assets` | Lista todos os ativos |
+| GET | `/api/assets/{id}` | Retorna ativo por ID |
+| GET | `/api/assets/search?symbol=PETR4` | Busca por símbolo |
+| POST | `/api/assets` | Cria ativo |
+| PUT | `/api/assets/{id}/price` | Atualiza preço |
+| DELETE | `/api/assets/{id}` | Exclui ativo |
+
+---
+
+### 🔹 PortfoliosController
+| Método | Endpoint | Descrição |
+|---------|-----------|------------|
+| GET | `/api/portfolios` | Lista todos os portfólios |
+| GET | `/api/portfolios/{id}` | Detalha um portfólio |
+| POST | `/api/portfolios` | Cria portfólio |
+| POST | `/api/portfolios/{id}/positions` | Adiciona posição |
+| PUT | `/api/portfolios/{id}/positions/{positionId}` | Atualiza posição |
+| DELETE | `/api/portfolios/{id}/positions/{positionId}` | Remove posição |
+
+---
+
+### 🔹 AnalyticsController
+| Método | Endpoint | Descrição |
+|---------|-----------|------------|
+| GET | `/api/portfolios/{id}/analytics/performance` | Retorno total e anualizado |
+| GET | `/api/portfolios/{id}/analytics/risk-analysis` | Análise de risco (Sharpe e volatilidade) |
+| GET | `/api/portfolios/{id}/analytics/rebalancing` | Sugestão de rebalanceamento |
+| GET | `/api/portfolios/{id}/analytics/diversification` | Diversificação setorial |
+| GET | `/api/portfolios/{id}/analytics/correlations` | Correlação entre ativos |
+
+---
+
+## 🧮 **Fórmulas Financeiras Implementadas**
+
+| Métrica | Fórmula | Descrição |
+|----------|----------|------------|
+| **Retorno Total (%)** | `(ValorAtual - Investimento) / Investimento * 100` | Crescimento acumulado |
+| **Retorno Anualizado (%)** | `(1 + RetTotal/100)^(365 / dias) - 1` | Retorno equivalente anual |
+| **Volatilidade** | `√Σ(x - média)² / média` | Risco (variação dos preços) |
+| **Sharpe Ratio** | `(Retorno - Selic) / Volatilidade` | Retorno ajustado ao risco |
+| **Correlação (ρ)** | `Σ((A - Ā)(B - B̄)) / √(Σ(A - Ā)² * Σ(B - B̄)²)` | Dependência estatística entre ativos |
+
+---
+
+## 📊 **Exemplo de Resultado – Correlação entre Ativos**
+
+**GET** `/api/portfolios/1/analytics/correlations`
+
 ```json
 {
-  "symbol": "PETR4",
-  "name": "Petrobras PN", 
-  "type": "Stock",
-  "sector": "Energy",
-  "currentPrice": 35.50
+  "portfolio": "Portfólio Crescimento",
+  "correlations": [
+    { "assetA": "PETR4", "assetB": "VALE3", "correlationCoefficient": 0.96 },
+    { "assetA": "PETR4", "assetB": "ITUB4", "correlationCoefficient": 0.22 },
+    { "assetA": "VALE3", "assetB": "ITUB4", "correlationCoefficient": 0.18 }
+  ]
 }
 ```
-- **15 ativos** reais da bolsa brasileira
-- **10 setores** diversificados (Energy, Financial, Mining, etc.)
-- Preços atualizados para outubro/2024
 
-#### 💼 **Portfolios (3 perfis)**
+📘 Interpretação:
+- **+1.0** → Ativos altamente correlacionados  
+- **0.0** → Sem correlação  
+- **–1.0** → Movimentos opostos  
+
+---
+
+## 🔁 **Rebalanceamento de Portfólio**
+
+**GET** `/api/portfolios/{id}/analytics/rebalancing`
+
 ```json
-{
-  "name": "Portfólio Conservador",
-  "userId": "user-001",
-  "totalInvestment": 100000.00,
-  "positions": [...]
-}
+[
+  { "asset": "PETR4", "action": "SELL", "amount": 1500.00 },
+  { "asset": "ITUB4", "action": "BUY", "amount": 1200.00 }
+]
 ```
-- **Conservador**: Foco em dividendos e baixo risco
-- **Crescimento**: Ações de tecnologia e varejo
-- **Dividendos**: Empresas maduras com boa distribuição
 
-#### 📈 **Price History (30 dias)**
-- Histórico completo para **5 ativos principais**
-- Dados diários de setembro-outubro/2024
-- Base para cálculos de volatilidade e retorno
-
-#### 🏛️ **Market Data**
-- Taxa Selic: 12% a.a.
-- Performance do Ibovespa
-- Métricas por setor
+📈 Regras:
+- Custos de transação: `0.3%`
+- Ignora valores < R$100
+- Ignora variações < 1%
+- Minimiza número de operações
 
 ---
 
-### 🔧 Como Implementar
+## 🧪 **Testes Unitários**
 
-#### 1. **Relacionamentos Importantes**
-- Um Portfolio tem múltiplas Positions
-- Uma Position referencia um Asset (por Symbol)
-- PriceHistory vinculado ao Asset
-- Calcule valores atuais usando CurrentPrice
+Executar todos os testes:
 
----
+```bash
+dotnet test
+```
 
-### 🚨 Pontos de Atenção
-
-#### **Não Hardcode Dados**
-- Carregue todos os dados do `SeedData.json` na inicialização
-- Use variáveis e constantes em vez de valores fixos
-
-#### **Mantenha Consistência**
-- Use `Symbol` como chave para relacionar Position ↔ Asset
-- `CurrentPrice` do Asset vs `AveragePrice` da Position
-- Datas no formato ISO 8601 (yyyy-MM-dd)
-
-#### **Trate Edge Cases**
-- E se não houver histórico de preços?
-- E se a alocação target não somar 100%?
-- E se o preço atual for zero?
+📊 Cobertura:
+- ✅ Cálculo de retorno total e anualizado  
+- ✅ Sugestões de rebalanceamento  
+- ✅ Cálculo de Sharpe Ratio e concentração  
 
 ---
 
-## 🚀 Como Entregar
+## ⚙️ **Como Executar o Projeto**
 
-### 1. Submissão do Código
-- Disponibilize o código em um repositório Git(Github, Gitlab...).
-- Envie o link do repositório para avaliação.
+### 🧰 Pré-requisitos
+- [.NET 8 SDK](https://dotnet.microsoft.com/en-us/download)
+- Visual Studio 2022 ou VS Code
 
-### 2. Estrutura Mínima Esperada
-- Controllers com todos os endpoints especificados
-- Services com lógica de negócio e cálculos financeiros
-- Models/Entities modeladas adequadamente
-- DbContext configurado (In-Memory DB)
-- Startup/Program.cs com DI configurada
-- **Seed automático** do `SeedData.json` na inicialização
+### ▶️ Rodando a API
 
-### 3. Documentação
-- README com instruções de execução
-- Comentários no código explicando algoritmos financeiros
-- Documentação dos endpoints
+```bash
+dotnet run --project Portifolio.Controllers
+```
 
-### 4. Testes Obrigatórios
-- Testes unitários dos cálculos financeiros críticos
-- Validação usando cenários do `SeedData.json`
+Acesse o Swagger:
+```
+https://localhost:5001/swagger
+```
 
 ---
 
-### ✅ **Entregas Obrigatórias**
-- [ ] CRUD completo de Assets e Portfolios
-- [ ] Carregamento automático do SeedData.json
-- [ ] Cálculo de valor atual do portfólio
-- [ ] Cálculo de retorno total e percentual
-- [ ] Algoritmo básico de rebalanceamento
-- [ ] 3 testes unitários dos cálculos críticos
-- [ ] Endpoints funcionais com validação básica
+## 🗃️ **Banco de Dados**
 
-### 🚀 **Diferencial**
-- [ ] Cálculo de volatilidade com histórico
-- [ ] Sharpe ratio completo
-- [ ] Análise de concentração por setor
-- [ ] Sistema de alertas
-- [ ] Documentação Swagger completa
-- [ ] Testes de integração
+- **InMemoryDatabase**
+- Dados carregados via `SeedData.json`
+- Inclui ativos, portfólios e histórico de preços
 
 ---
 
-## 💡 Dicas
+## 📅 **Formato de Datas**
 
-1. **Comece pelo básico**: CRUD primeiro, otimizações depois
-2. **Use InMemory Database**: Mais rápido para desenvolvimento  
-3. **Priorize algoritmos**: Cálculos valem mais pontos que endpoints
-4. **Valide o essencial**: Preços negativos, quantidades inválidas
-5. **Documente decisões**: Explique fórmulas financeiras usadas
-6. **Teste frequentemente**: Valide cada cálculo implementado
-7. **Atenção**: Funcional > perfeito
+Todas as datas seguem o padrão **ISO 8601 (`yyyy-MM-dd`)**
+
+```json
+"createdAt": "2024-10-21"
+```
+
+---
+
+## 📸 **Swagger e Testes**
+
+![Swagger Screenshot](https://github.com/rmyotin/Portfolio-Financeiro/raw/main/docs/swagger.png)
+
+![Tests Screenshot](https://github.com/rmyotin/Portfolio-Financeiro/raw/main/docs/tests.png)
+
+*(Adicione suas capturas em `/docs/` se desejar que apareçam no README do GitHub.)*
+
+---
+
+## ✅ **Status Final**
+
+| Requisito | Status |
+|------------|----------|
+| CRUD de ativos e portfólios | ✅ |
+| Cálculos de performance | ✅ |
+| Sistema de rebalanceamento | ✅ |
+| Análise de risco e diversificação | ✅ |
+| Correlação entre ativos | ✅ |
+| Testes unitários | ✅ |
+| Documentação Swagger | ✅ |
+| README técnico | ✅ |
+
+---
+
+## 🧠 **Autor**
+
+**Rodrigo Myotin**  
+Desenvolvedor .NET | Pós-graduação em Cybersecurity  
+📧 [myotin@yahoo.com.br](mailto:myotin@yahoo.com.br)  
+💼 [https://github.com/rmyotin/Portfolio-Financeiro](https://github.com/rmyotin/Portfolio-Financeiro)
+
+---
+
+## 🏁 **Comandos de Entrega**
+
+```bash
+dotnet clean
+dotnet build
+dotnet test
+git add .
+git commit -m "Entrega final - Portfolio API"
+git push origin main
+```
