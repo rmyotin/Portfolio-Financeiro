@@ -1,4 +1,6 @@
-﻿namespace Portifolio.Models.Models
+﻿using System.Collections.Generic;
+
+namespace Portifolio.Models.Models
 {
     public class SeedData
     {

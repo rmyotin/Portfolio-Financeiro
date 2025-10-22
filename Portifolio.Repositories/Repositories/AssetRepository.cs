@@ -7,14 +7,17 @@ namespace Portifolio.Repositories.Repositories
     public class AssetRepository : IAssetRepository
     {
         private readonly AppDbContext _context;
+        private readonly SeedData _seedData;
 
-        public AssetRepository(AppDbContext context)
+        public AssetRepository(AppDbContext context, SeedData seedData)
         {
             _context = context;
+            _seedData = seedData;
         }
+
         public IEnumerable<Asset> GetAll() => _context.Assets.ToList();
 
-        public Asset? GetById(int id) => _context.Assets.Find(id);
+        public Asset? GetById(int id) => _context.Assets.FirstOrDefault(a => a.Id == id);
         public Asset? GetBySymbol(string symbol)
         {
             return _context.Assets.FirstOrDefault(a => a.Symbol.Equals(symbol, StringComparison.OrdinalIgnoreCase));
@@ -48,8 +51,9 @@ namespace Portifolio.Repositories.Repositories
 
         public List<PriceHistory>? GetPriceHistory(string symbol)
         {
-            var asset = _context.Assets.FirstOrDefault(a => a.Symbol == symbol);
-            return asset?.PriceHistory;
+            if (_seedData.PriceHistory.TryGetValue(symbol, out var list))
+                return list;
+            return new List<PriceHistory>(); // evita null
         }
     }
 }

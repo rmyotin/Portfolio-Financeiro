@@ -183,19 +183,16 @@ namespace Portifolio.Services.Services
                     var historyA = _assetRepository.GetPriceHistory(assetA);
                     var historyB = _assetRepository.GetPriceHistory(assetB);
 
-                    if (historyA == null || historyB == null) continue;
+                    var commonDates = historyA!.Select(h => h.Date)
+                                                .Intersect(historyB!.Select(h => h.Date))
+                                                .ToList();
+
 
                     // Garante mesmo número de observações
-                    var joined = historyA.Join(
-                        historyB,
-                        a => a.Date,
-                        b => b.Date,
-                        (a, b) => new
-                        {
-                            PriceA = a.Price,
-                            PriceB = b.Price
-                        })
-                        .ToList();
+                    var joined = commonDates.Select(d => new {
+                        PriceA = historyA.First(h => h.Date == d).Price,
+                        PriceB = historyB.First(h => h.Date == d).Price
+                    }).ToList();
 
                     if (joined.Count < 3) continue; // precisa de dados suficientes
 

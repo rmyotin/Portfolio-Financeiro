@@ -1,6 +1,8 @@
 using Microsoft.EntityFrameworkCore;
+using Newtonsoft.Json;
 using Portifolio.Infrastructure.Context;
 using Portifolio.Infrastructure.Data;
+using Portifolio.Models.Models;
 using Portifolio.Repositories.Interfaces;
 using Portifolio.Repositories.Repositories;
 using Portifolio.Services.Interfaces;
@@ -10,6 +12,15 @@ using System.Reflection;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+var jsonPath = Path.Combine(AppContext.BaseDirectory, "SeedData.json");
+if (!File.Exists(jsonPath))
+    throw new FileNotFoundException("SeedData.json não encontrado em " + jsonPath);
+
+var json = File.ReadAllText(jsonPath);
+
+var seedData = JsonConvert.DeserializeObject<SeedData>(json)!;
+
+builder.Services.AddSingleton(seedData);
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle

@@ -16,6 +16,7 @@ namespace Portifolio.Infrastructure.Data
                 throw new FileNotFoundException("SeedData.json não encontrado em " + jsonPath);
 
             var json = File.ReadAllText(jsonPath);
+
             var data = JsonConvert.DeserializeObject<SeedData>(json)!;
 
             context.Assets.AddRange(data.Assets);
